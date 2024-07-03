@@ -1,5 +1,7 @@
 package com.example.blogapp.controllers;
 
+import io.swagger.annotations.Api;
+
 import com.example.blogapp.models.User;
 import com.example.blogapp.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
+@Api(tags = "User Management")
 public class UserController {
     @Autowired
     private UserService userService;
